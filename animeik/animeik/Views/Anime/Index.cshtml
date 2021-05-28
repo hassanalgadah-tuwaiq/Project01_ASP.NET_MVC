@@ -28,13 +28,16 @@
                         <small class="text-muted">Score: @a.score</small>
                     </p>
                     <a href="https://localhost:5001/anime/details/@a.id" class="btn btn-primary">Details</a>
-                    <a href="https://localhost:5001/users/addFav/1/@a.id" class="btn btn-outline-success">Favorite</a>
+                    <button onclick="addfav(@a.id)" data-toggle="modal" data-target=".bd-example-modal-sm" data-dismiss="alert" class="btn btn-outline-success">Favorite</button>
                 </div>
             </div>
         </div>
     }
 </div>
 
+  <div id="popup" class="alert alert-success alert-dismissible fade show" style=" opacity: 0; position: fixed; bottom: 0;right: 0">
+    <strong>Success!</strong> This Anime has been added to your Favorites list.
+  </div>
 </body>
     <script src="js/anime.js"></script>
 </html>
