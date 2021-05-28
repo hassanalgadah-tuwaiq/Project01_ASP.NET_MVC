@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+    var anime = (List<Anime>) ViewData["list"];
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Anime list</title>
+</head>
+<body>
+<form class="example">
+    <input type="text" placeholder="Search.." name="search" id="searchname">
+    <button id="searchbtn" type="button"><i class="fa fa-search"></i></button>
+</form>
+<div class="row d-flex container ">
+
+    @foreach (Anime a in anime)
+    {
+        <div class="card-deck" style="width: 20em; padding: 1em">
+            <div class="card">
+                <img class="card-img-top" src="@a.image_url" height="200" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">@a.title</h5>
+                    <p class="card-text">
+                        <small class="text-muted">Score: @a.score</small>
+                    </p>
+                    <a href="https://localhost:5001/anime/details/@a.id" class="btn btn-primary">Details</a>
+                    <a href="https://localhost:5001/users/addFav/1/@a.id" class="btn btn-outline-success">Favorite</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+</body>
+    <script src="js/anime.js"></script>
+</html>
