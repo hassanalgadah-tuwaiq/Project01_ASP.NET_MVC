@@ -15,12 +15,13 @@ namespace animeik.Models
             this.username = user;
             Fav = new List<Anime>();
         }
-
-
         public void addToFav(Anime anime)
         {
-            Console.WriteLine("hello");
             Fav.Add(anime);
+        }
+        public void removeFav(int animeid)
+        {
+            Fav.Remove(Fav.Find(an => an.id == animeid));
         }
     }
 }

@@ -19,5 +19,10 @@ namespace animeik.Controllers
         {
             Utilities.users.Find(u => u.id == id).addToFav(Utilities.animelist.Find(i => i.id == animeId));
         }
+        public IActionResult removeFav(int id, int animeId)
+        {
+            Utilities.users.Find(u => u.id == id).removeFav(animeId);
+            return View("index");
+        }
     }
 }

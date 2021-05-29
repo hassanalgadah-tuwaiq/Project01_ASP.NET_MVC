@@ -6,17 +6,18 @@
     
     <title>@ViewData["Title"] - Animeik</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="~/js/anime.js"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/anime.css">
+    <link rel="stylesheet" href="~/css/anime.css">
 
 
 </head>
-<body>
-<header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-        <div class="container">
+<body style="background-color: #9197AE">
+<header >
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light  border-bottom box-shadow mb-3" style="background-color: #273043" >
+        <div class="container" >
             <a class="navbar-brand" asp-area="" asp-controller="Anime" asp-action="Index">Animeik</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -25,10 +26,10 @@
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                 <ul class="nav nav-pills">
                     <li class="nav-item">
-                        <a class="nav-link active" asp-area="" asp-controller="Anime" asp-action="Index">Home</a>
+                        <a class="nav-link active" href="/anime/index" >Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-action="Index">Users</a>
+                        <a class="nav-link " asp-area="" asp-controller="Users" asp-action="Index">Users</a>
 
                     </li>
                 </ul>
@@ -36,7 +37,7 @@
         </div>
     </nav>
 </header>
-<div class="container">
+<div  class="container">
     <main role="main" class="pb-3">
         @RenderBody()
     </main>

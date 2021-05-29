@@ -4,16 +4,16 @@
     Anime a = (Anime)ViewData["anime"];
 }
 
-<div style="font-family: Arial, sans-serif">
-    <H1>@a.title</H1>
+<H1>@a.title</H1>
+<div style="font-family: Arial, sans-serif ; font-size: x-large">
     <div style="float: left; margin-right: 1em">
         <img src="@a.image_url"/>
     </div>
-    <p>title: @a.title</p>
-    <p>type: @a.type</p>
-    <p>episodes: @a.episodes</p>
-    <p>start_date: @a.start_date</p>
-    <p>end_date: @a.end_date</p>
-    <p>score: @a.score</p>
+    <p>Title: @a.title</p>
+    <p>Type: @a.type</p>
+    <p>Episodes: @a.episodes</p>
+    <p>Start date: @a.start_date</p>
+    <p>End date: @a.end_date</p>
+    <p>Score: @a.score</p>
     <a href="@a.url" class="btn btn-primary">MAL</a>
 </div>
