@@ -35,12 +35,12 @@ namespace animeik.Controllers
         public static List<User> users = new List<User>()
         {
             new User(1, "hassan"),
-            new User(2, "sara"),
             new User(3, "mohammed"),
             new User(4, "fahad"),
+            new User(2, "sara"),
             new User(5, "abdulrahman"),
             new User(6, "sultan"),
-            new User(7, "nora"),
+            new User(7, "nora")
         };
     }
 }
